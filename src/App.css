@@ -5,7 +5,12 @@
 }
 
 body {
-  background-color: #020631;
+  background-color: #020631 ;
+  font-family: Arial, sans-serif;
+}
+:root {
+  --primary-color: #f4f6f8; 
+  --secondary-color: #aaaaaa; 
 }
 
 .app {
@@ -13,6 +18,7 @@ body {
   top: 10%;
   left: 50%;
   transform: translate(-50%, -10%);
+
 }
 
 .app .mainHeading h1 {
@@ -22,6 +28,7 @@ body {
 .app h1,
 h2 {
   color: white;
+  text-align: center;
 }
 
 .app .input {
@@ -31,8 +38,9 @@ h2 {
 }
 
 .app .input {
+  margin: 20px;
   margin-top: 0.8em;
-  width: 20em;
+  /* width: 20em; */
   height: 2em;
   background-color: white;
   display: flex;
@@ -58,8 +66,8 @@ h2 {
 }
 .app .todos {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   flex-direction: column;
 }
 .app .todos .todo {
@@ -85,5 +93,144 @@ h2 {
   font-weight: 700;
   font-style: normal;
   color: grey;
+}
+
+#item{
+  text-decoration: line-through;
+  opacity: 5;
+}
+
+.my-add-button {
+  background-color: #28a745; 
+  color: #fff; 
+  padding: 5px 5px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px; 
+}
+
+.my-edit-button {
+  background-color: #ff4800; 
+  color: #fff; 
+  padding: 5px 5px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px; 
+}
+
+
+.my-add-button:hover,
+.my-edit-button:hover {
+  opacity: 0.8; 
+}
+
+
+
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px; 
+}
+
+.icon-edit {
+  font-size: 20px;
+  color: #ffd900; 
+  margin-right: 5px; 
+
+}
+
+.icon-delete {
+  font-size: 20px;
+  color: #ff0000; 
+
+}
+
+.icon-container:hover .icon-edit {
+  color: #0056b3; 
+}
+
+.icon-container:hover .icon-delete {
+  color: #d80000; 
+}
+
+
+
+.completed-tasks {
+  border-left: 1px solid #ccc; 
+  padding-left: 20px; 
+  margin-top: 20px; 
+}
+
+
+.completed-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.completed-task-text {
+  flex: 1;
+}
+
+.completed-task-actions {
+  margin-left: 10px;
+}
+
+.icon-container {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.icon-delete {
+  color: red;
+}
+
+.icon-edit {
+  color: blue;
+}
+
+
+.completion-time {
+  color: #352a2a; 
+  font-size: 12px; 
+  margin-left: 10px; 
+}
+
+
+
+.todos {
+  border: 2px solid #ccc; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+  background-color: #681040; 
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px; 
+}
+
+.tasks-container {
+  max-height: 450px; 
+  /* overflow-y: scroll; */
+}
+
+.priority-button.priority {
+  color: gold;
+  margin-right: 10px;
+}
+.todo.priority {
+
+  border-left: 4px solid gold;
+}
+
+
+.priority-button.no-priority{
+  margin-right: 10px;
 }
 
